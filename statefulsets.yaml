@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: counter
-  replicas: 1 
+  replicas: 3 
   template:
     metadata:
       labels:
@@ -24,7 +24,6 @@ spec:
       name: counter
     spec:
       accessModes: [ "ReadWriteMany" ]
-      storageClassName: efs
       resources:
         requests:
           storage: 50Mi
